@@ -1,0 +1,119 @@
+            body {
+                background: url(Images/playful-kitten-6683.jpg) no-repeat center fixed;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                font-family: Montserrat;
+                font-size:4vh;
+                
+            }
+            
+            #header{
+                font-size:9vh;
+                
+                
+            }
+            
+            #subheader{
+                
+                
+                
+                
+            }
+            
+            p{
+                display: inline-block;
+                
+            }
+
+            #netflix{
+                margin-top:15px; 
+                height: 60px;
+                width: 100px;
+                position: absolute;
+                
+                
+                
+            }
+            
+            .orange{
+                color: orange;
+                text-shadow: 3px 3px 5px black;
+            }
+            
+            
+            
+            #options{
+                position: absolute;
+                bottom: 4vh;
+                right: 0;
+                
+            }
+            
+            a{
+                font-size: 5vh;
+                text-decoration: none;
+                color: orange;
+                padding: 2vw;
+                text-shadow: 3px 3px 5px black;
+                
+            }
+            
+            #popup{
+
+                display: none;
+
+                position: absolute;
+
+                top: 35vh;
+
+                left: 20vw;
+
+                max-width: 60%;
+
+                max-height: 60%;
+
+                border: 5px solid rgba(255,153,0,0.8);
+                
+
+                background-color: rgba(0,0,0, 0.8);
+
+                border-radius: 20px;
+                
+                
+                
+                
+            
+            }
+            
+            #close{
+                position: absolute;
+                right: -1vw;
+                top: -2vh;
+                height: 4vh;
+                
+                
+                
+                
+            }
+            
+            #close img{
+                height: 4vh;
+                
+            }
+            
+            #table{
+                color: orange;
+                opacity: .6;
+                padding: 4vh;
+                font-size: 70%;
+                padding: 10px;
+                
+            }
+            
+            @media screen and (max-width: 570px){
+                #table{
+                    font-size: 50%;
+                }
+            }
