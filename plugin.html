@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        
+        <style>
+            .box{
+                background: green;
+                width: 200px;
+                height: 200px;
+                color: white;
+                margin: 50px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script>
+            $.fn.myHide = function() {
+                this.css({
+                    display: "none"
+                });
+            }
+        </script>
+        <script>
+            $('div').myHide();
+            
+        </script>    
+    </body>
+</html>
