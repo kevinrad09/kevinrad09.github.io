@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script   src="https://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+<style>
+    body {
+        background-color: black;
+    }
+    .parallax {
+        /* The image used */
+        background-image: url("https://static.pexels.com/photos/37403/bora-bora-french-polynesia-sunset-ocean-medium.jpg");
+
+        /* Set a specific height */
+        height: 100vh;
+        min-height: 500px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    
+    #firstProject {
+        /* The image used */
+        background-image: url("https://static.pexels.com/photos/26498/pexels-photo-26498-medium.jpg");
+
+        /* Set a specific height */
+        height: 100vh;
+        width: 100vw;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    #secondProject {
+        /* The image used */
+        background-image: url("https://static.pexels.com/photos/26498/pexels-photo-26498-medium.jpg");
+
+        /* Set a specific height */
+        height: 100vh;
+        width: 100vw;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    #thirdProject {
+        /* The image used */
+        background-image: url("https://static.pexels.com/photos/26498/pexels-photo-26498-medium.jpg");
+
+        /* Set a specific height */
+        height: 100vh;
+        width: 100vw;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+    
+    #footer {
+        /* The image used */
+        background-image: url("");
+
+        /* Set a specific height */
+        height: 100vh;
+        width: 100vw;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        
+        }
+    
+    #footer p{
+        color: aqua;
+    }
+    
+    #footer img{
+        height: 50vh;
+    }
+        body {
+        margin:0px;
+        }
+        h1 {
+        margin:0px;
+        }
+        nav {
+        position:fixed;
+        top:0px;
+        }
+    
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: blue;
+            position: fixed;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    
+        .flip-container {
+	       perspective: 1000px;
+        }
+            /* flip the pane when hovered */
+            .flip-container:hover .flipper, .flip-container.hover .flipper {
+                transform: rotateY(180deg);
+            }
+
+        .flip-container, .front, .back {
+            width: 320px;
+            height: 480px;
+        }
+
+        /* flip speed goes here */
+        .flipper {
+            transition: 0.8s;
+            transform-style: preserve-3d;
+
+            position: relative;
+        }
+
+        /* hide back of pane during swap */
+        .front, .back {
+            backface-visibility: hidden;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* front pane, placed above back */
+        .front {
+            z-index: 2;
+            /* for firefox 31 */
+            transform: rotateY(0deg);
+        }
+
+        /* back, initially hidden pane */
+        .back {
+            transform: rotateY(180deg);
+        }
+</style>
+</head>
+<body>
+    <ul>
+        <li><a id="home">Home</a></li>
+        <li><a id="project">Projects</a></li>
+        <li><a id="about">About</a></li>
+    </ul>
+
+    <div class="parallax"></div>
+
+    <div style="height:3vh;background-color:salmon;font-size:30px">
+
+
+    </div>
+
+    <div id="firstProject">
+        <div id="firstProjectImage">
+            Hello, how are you
+        </div>
+    </div>
+
+    <div style="height:3vh;background-color:salmon;font-size:10%">
+        
+    </div>
+    
+      <div id="secondProject"></div>
+
+    <div style="height:3vh;background-color:salmon;font-size:10%">
+        
+
+    </div>
+    
+      <div id="thirdProject"></div>
+
+    <div style="height:3vh;background-color:salmon;font-size:10%">
+        
+
+    </div>
+    
+    <div id="footer">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	       <div class="flipper">
+		      <div class="front">
+			     <img src="images/IMG_3464.jpeg">
+		      </div>
+		<div class="back">
+			<img src="images/IMG_0078.jpeg">
+		</div>
+	</div>
+</div>
+        <p>Kevin Rademacher</p>
+    
+    </div>
+
+    <div style="height:10vh;background-color:salmon;font-size:1em">
+        Kevin Rademacher
+
+    </div>
+    <script>
+    $("#project").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#firstProject").offset().top},
+        'slow');
+});
+        $("#home").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".parallax").offset().top},
+        'slow');
+});
+        $("#about").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#footer").offset().top},
+        'slow');
+});
+        
+    
+    </script>
+    
+    </body>
+</html>
