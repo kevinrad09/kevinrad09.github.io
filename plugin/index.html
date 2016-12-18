@@ -66,7 +66,7 @@
     
     #footer {
         /* The image used */
-        background-image: url("");
+        background-image: url("fog.jpg");
 
         /* Set a specific height */
         height: 100vh;
@@ -77,21 +77,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        
-        
         }
-    
-    #footer p{
-        color: aqua;
-    }
-    
-    #footer img{
-        height: 50vh;
-    }
         body {
         margin:0px;
         }
@@ -128,126 +114,50 @@
         li a:hover {
             background-color: #111;
         }
-    
-        .flip-container {
-	       perspective: 1000px;
-        }
-            /* flip the pane when hovered */
-            .flip-container:hover .flipper, .flip-container.hover .flipper {
-                transform: rotateY(180deg);
-            }
-
-        .flip-container, .front, .back {
-            width: 320px;
-            height: 480px;
-        }
-
-        /* flip speed goes here */
-        .flipper {
-            transition: 0.8s;
-            transform-style: preserve-3d;
-
-            position: relative;
-        }
-
-        /* hide back of pane during swap */
-        .front, .back {
-            backface-visibility: hidden;
-
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        /* front pane, placed above back */
-        .front {
-            z-index: 2;
-            /* for firefox 31 */
-            transform: rotateY(0deg);
-        }
-
-        /* back, initially hidden pane */
-        .back {
-            transform: rotateY(180deg);
-        }
 </style>
 </head>
 <body>
     <ul>
-        <li><a id="home">Home</a></li>
-        <li><a id="project">Projects</a></li>
-        <li><a id="about">About</a></li>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
     </ul>
 
-    <div class="parallax"></div>
+    <div class="parallax">;alsdkasdfasdfasdfasdfasdfxsjf;alsdkjf;alsdkfj</div>
 
-    <div style="height:3vh;background-color:salmon;font-size:30px">
-
+    <div style="height:100px;background-color:salmon;font-size:30px">
+        Scrolling
 
     </div>
 
-    <div id="firstProject">
-        <div id="firstProjectImage">
-            Hello, how are you
-        </div>
-    </div>
+    <div id="firstProject"><div id="firstProjectImage">Hello, how are you</div></div>
 
-    <div style="height:3vh;background-color:salmon;font-size:10%">
-        
+    <div style="height:5vh;background-color:salmon;font-size:10%">
+        Scrolling
+
     </div>
     
       <div id="secondProject"></div>
 
-    <div style="height:3vh;background-color:salmon;font-size:10%">
-        
+    <div style="height:5vh;background-color:salmon;font-size:10%">
+        Scrolling
 
     </div>
     
       <div id="thirdProject"></div>
 
-    <div style="height:3vh;background-color:salmon;font-size:10%">
-        
+    <div style="height:5vh;background-color:salmon;font-size:10%">
+        Scrolling
 
     </div>
     
-    <div id="footer">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	       <div class="flipper">
-		      <div class="front">
-			     <img src="images/IMG_3464.jpeg">
-		      </div>
-		<div class="back">
-			<img src="images/IMG_0078.jpeg">
-		</div>
-	</div>
-</div>
-        <p>Kevin Rademacher</p>
-    
-    </div>
+    <div id="footer"></div>
 
-    <div style="height:10vh;background-color:salmon;font-size:1em">
+    <div style="height:5vh;background-color:salmon;font-size:1em">
         Kevin Rademacher
 
     </div>
-    <script>
-    $("#project").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#firstProject").offset().top},
-        'slow');
-});
-        $("#home").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".parallax").offset().top},
-        'slow');
-});
-        $("#about").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#footer").offset().top},
-        'slow');
-});
-        
-    
-    </script>
     
     </body>
 </html>
