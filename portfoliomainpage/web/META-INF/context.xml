@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/sample">
+  <Resource auth="Container" 
+			driverClassName="com.mysql.jdbc.Driver" 
+			factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+			maxActive="100" 
+			maxIdle="30" 
+			maxWait="10000" 
+			name="/jdbc/orange" 
+			password="interface" 
+			testOnBorrow="true" 
+			testOnReturn="false" 
+			testWhileIdle="true" 
+			type="javax.sql.DataSource" 
+			url="jdbc:mysql://localhost:3306/orange" 
+			username="interface" 
+			validationInterval="34000" 
+			validationQuery="SELECT 1"/>
+</Context>

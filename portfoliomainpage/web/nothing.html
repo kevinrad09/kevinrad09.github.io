@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="jquery-2.2.4.js"></script>
+		<script>
+			$(document).ready(function(){
+				$.ajax({
+						url: 'show',
+						method: "POST",
+						dataType: 'json',
+						data: {
+						showName: "Orange is the new Cat"
+						},
+						error: function (xhr, status, err) {
+							alert("Error! " + status + ";" + err);
+							},
+						success: showShows
+				});
+						function showShows(eps) {
+							$("schedule-popup").empty();
+							var table = $("<table/>");
+							for (var i = 0; i < eps.length; i++) {
+								var tr = $("<tr/>");
+								table.append(tr);
+								var td = $("<td/>");
+								td.append(eps[i].name);
+								tr.append(td);
+								td = $("<td/>");
+								td.append(eps[i].desc);
+								tr.append(td);
+								td = $("<td/>");
+								td.append(eps[i].date);
+								tr.append(td);
+
+							}
+							$("#schedule-popup").append(table);
+						}
+
+			});
+					function removeSchedule() {
+						$("#schedule-popup").fadeOut(250);
+					}
+					
+					function getSchedule() {
+						$("#schedule-popup").fadeIn(250);
+						return false;
+					}
+
+			$(document).ready(function () {
+		//		$("#schedule-popup").click(removeSchedule);
+		//		$("#schedule-popup").click(function() {
+		//			$(this).fadeOut(250);
+		//		})
+				$("nav > a").mouseenter(function () {
+					var atag = $(this);
+					$("#pawprint").fadeIn(250, function () {
+						var left = atag.position().left;
+						var width = atag.width();
+						var middle = left + width / 2 - 15;
+						$("#pawprint").css("left", middle + "px");
+					});
+				});
+
+				$("nav").mouseleave(function () {
+					$("#pawprint").fadeOut(250);
+				});
+
+		//		$("nav").mouseenter(function() {
+		//			$("#pawprint").fadeIn(250);
+		//		});
+			});
+
+		</script>
+		<style>
+			body {
+				background-image: url('images/playful-kitten-6683.jpg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				height: 100vh;
+				margin: 0;
+				font-family: sans-serif;
+			}
+
+			/*	
+				h1 > span {
+					color: orange;
+				}
+				
+			*/
+			h1, h2 {
+				font-size: 9vh;
+				padding-left: 2vw;
+				margin: 0;
+			}
+
+			h2 {
+				font-size: 4vh;
+				padding-top: .5em;
+			}
+
+			.hilite {
+				color: orange;
+				text-shadow: 0.05em 0.05em 0.025em #404040;
+			}
+
+			h2 > img {
+				vertical-align: middle;
+				height: 3em;
+			}
+
+			nav {
+				position: absolute;
+				bottom: 1em;
+				right: 0.5em;
+				font-size: 5vh;
+			}
+
+			nav > a {
+				text-decoration: none;
+				margin-right: .5em;
+				display: inline-block;
+				vertical-align: bottom;
+				transition: padding-bottom 0.25s;
+			}
+
+			a:hover {
+				padding-bottom: .5em;
+			}
+
+			#pawprint {
+				position: absolute;
+				bottom: -0.2em;
+				left: -100vw;
+				transition: all 0.25s;
+			}
+
+			#schedule-popup {
+				display: none;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				background-color: rgba(0,0,0,.8);
+				color: orange;
+				padding: 0.5em;
+				border-radius: 0.5em;
+				border: 3px ridge orange;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1><span class="hilite">Orange</span> is the new <span class="hilite">Cat</span></h1>
+		<h2><span>only on</span> <img src="images/netflix.jpg"/></h2>
+		<div id="output"></div>
+		<nav>
+			<a class="hilite" href="">Home</a>
+			<a class="hilite" href="">About</a>
+			<a class="hilite" href="" onclick="return getSchedule()">Schedule</a>
+			<a class="hilite" href="">Contact</a>
+			<img src="images/pawprint.png" id="pawprint"/>
+		</nav>
+		<div id="schedule-popup" onclick="removeSchedule()">
+		</div>
+	</body>
+</html>
