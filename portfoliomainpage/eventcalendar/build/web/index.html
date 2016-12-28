@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>MVP Event Calendar</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/standard.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<header>
+		<h1>Event Calendar</h1>
+		<p>Select a month and year to view events.</p>
+		</header>
+		<div class="selectors">
+		<select name="month">
+			<option value="01">January</option>
+			<option value="02">February</option>
+			<option value="03">March</option>
+			<option value="04">April</option>
+			<option value="05">May</option>
+			<option value="06">June</option>
+			<option value="07">July</option>
+			<option value="08">August</option>
+			<option value="09">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+		<select name="year">
+			<option>2015</option> 
+			<option>2016</option>
+			<option>2017</option>
+		</select>
+		</div>	
+		<button id="getEvents">Get Events!</button>
+		<div id="displayEvents">Your events will display here.</div>
+	</body>
+</html>

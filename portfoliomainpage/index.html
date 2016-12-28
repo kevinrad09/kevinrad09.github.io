@@ -143,8 +143,16 @@
             
         }
     
+    .outerContainer{
+        display: flex;
+        
+    }
     
-    
+    .photos{
+        margin: 10vw;
+        height: 40vh;
+        width: 40vw;
+    }
         
         .flip-container {
 	       perspective: 1000px;
@@ -194,7 +202,7 @@
         <ul>
             <li><a id="home">Home</a></li>
             <li><a id="project">Projects</a></li>
-            <li><a id="about" href="web/index.html">About</a></li>
+            <li><a id="about">About</a></li>
         </ul>
         
     </header>    
@@ -210,8 +218,10 @@
     <div id="firstProject">
         <div id="firstProjectImage">
             <h1 class="projectHeader">JAVA</h1>
-            <div id="resume"><img src="images/Resume.pdf"></div>
-            <a></a>
+            
+            <div class="outerContainer">
+                <a href="web/index.html"><img class="photos" src="web/images/playful-kitten-6683.jpg"></a>
+            </div>
         </div>
         
     </div>
@@ -222,8 +232,11 @@
     
       <div id="secondProject">
         <h1 class="projectHeader">Html & CSS</h1>
+          <div class="outerContainer">
+                <a href="Sixteen/index.html"><img class="photos" src="Sixteen/images/44UIandUX.png"></a>
+            </div>
         </div>
-    <div class="box"></div>
+    
 
     <div style="height:0vh;background-color:salmon;font-size:10%">
         
@@ -232,6 +245,7 @@
     
       <div id="thirdProject">
         <h1 class="projectHeader">JavaScript</h1>
+          <a href="eventcalendar/web/index.html"><img class="photos" src="Sixteen/images/44UIandUX.png"></a>
         </div>
     <div class="box"></div>
 
